@@ -55,10 +55,10 @@ def main():
             missing_letters = missing_letters,
 
             letters_count = letters_count,
-            vv_count = len(vv_count),
-            vc_count = len(vc_count),
-            cv_count = len(cv_count),
-            cc_count = len(cc_count),
+            vv_count = sum(vv_count.values()),
+            vc_count = sum(vc_count.values()),
+            cv_count = sum(cv_count.values()),
+            cc_count = sum(cc_count.values()),
 
             table_1 = get_ltrs_freq_table(all_freq, letters_count, config['precision']),
             
