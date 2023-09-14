@@ -1993,6 +1993,7 @@
                 <w:t>и буквами в данном тексте будут {% for letter in top_letters %} <w:t> </w:t>
         {{letter}}, {% endfor %} </w:t>
             </w:r>
+            {% if missing_letters %}
             <w:r w:rsidR="00E8699D">
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
@@ -2001,6 +2002,7 @@
                 </w:rPr>
                 <w:t>. {{missing_letters}}.</w:t>
             </w:r>
+            {% endif %}
         </w:p>
         <w:p
             w:rsidR="00E8699D" w:rsidRDefault="00E8699D" w:rsidP="00C3766F">
@@ -2051,7 +2053,7 @@
                     <w:szCs w:val="28" />
                     <w:lang w:val="en-US" />
                 </w:rPr>
-                <w:t>xcel </w:t>
+                <w:t>xcel</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
@@ -2059,7 +2061,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>построена диаграмма релье</w:t>
+                <w:t> построена диаграмма релье</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
