@@ -90,7 +90,7 @@ def get_combinations(arr1: list[str], arr2: list[str]) -> list[str]:
 def get_ltrs_freq_table(all_freq: dict[str, int], letters_count: int, precision: int) -> list[list[list[str]]]:
     items = []
     
-    freq_items = all_freq.items()
+    freq_items = list(all_freq.items())
     half_len = len(freq_items) // 2
     for i in range(0, half_len):
         ltr, cnt = freq_items[i]
@@ -108,8 +108,8 @@ def get_ltrs_freq_table(all_freq: dict[str, int], letters_count: int, precision:
 def get_bigrams_table(bigrams_freq: dict[str, int]) -> list[list[list[str]]]:
     items = []
 
-    freq_items = bigrams_freq.items()
-    quad_len = len(bigrams_freq // 4)
+    freq_items = list(bigrams_freq.items())
+    quad_len = len(bigrams_freq) // 4
     for i in range(0, quad_len):
         line = []
         for j in range(4):
