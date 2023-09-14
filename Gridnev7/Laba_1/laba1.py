@@ -2,6 +2,7 @@ import os
 import json
 import re
 
+from word4univer.Word.rels import Image
 from word4univer import (
     Lab,
     LabInfo,
@@ -29,7 +30,13 @@ class Laba1(Lab):
     )
 
     def __init__(self, input_filename: str, student: StudentInfo, **params):
-        super().__init__(self.info, student, parts_folder=get_file("docparts"), style=Path.get_src("styles/tstu.xml"),  **params)
+        super().__init__(
+            self.info,
+            student,
+            parts_folder=get_file("docparts"),
+            style=Path.get_src("styles/tstu.xml"),
+            **params
+        )
 
         with open(get_file(get_file("config.json")), "r", encoding="UTF-8") as conf_f:
             self.config = json.load(conf_f)
@@ -93,19 +100,34 @@ class Laba1(Lab):
             if v > 0
         }
 
+        top_letters = [
+            k
+            for k, v in sorted(self.all_freq.items(), key=lambda k: k[1], reverse=True)
+            if v > 0
+        ]
+        self.top_letters = top_letters[
+            : min(self.config["max_top_letters"], len(top_letters))
+        ]
+        self.missing_letters = [k for k, v in self.all_freq.items() if v == 0]
+
     def run(self):
         TitlePages.tstu(self.document)
+
+        diagram_style = {"width": 266, "height": 230}
+        diagram_img = Image(Path.get_path(get_file("diagram.png")), style=diagram_style)
+        diagram_img.id = self.document.add_relation(diagram_img)
 
         context = {
             "text_name": "какой-то текст который мне скинул Ванёк",
             "text": self.lines,
-            # "top_letters": self.top_letters,
-            # "missing_letters": self.missing_letters,
+            "top_letters": self.top_letters,
+            "missing_letters": self.missing_letters,
             "letters_count": self.letters_count,
             "vv_count": sum(self.vv_count.values()),
             "vc_count": len(self.vc_count.values()),
             "cv_count": len(self.cv_count.values()),
             "cc_count": len(self.cc_count.values()),
+            "diagram": diagram_img,
             "table_1": self.get_ltrs_freq_table(self.all_freq, self.letters_count),
             "table_2": self.get_bigrams_table(self.vv_count),
             "table_3": self.get_bigrams_table(self.vc_count),
@@ -150,7 +172,9 @@ class Laba1(Lab):
             left = [
                 ltr.upper(),
                 cnt,
-                round((cnt / letters_count), self.config["precision"]) if cnt > 0 else "–",
+                round((cnt / letters_count), self.config["precision"])
+                if cnt > 0
+                else "–",
             ]
             if i < len(freq_items):
                 ltr, cnt = freq_items[half_len + i]

@@ -1,3 +1,4 @@
+{% import 'image.xml' as img %}
 <w:p w:rsidR="00384D96" w:rsidRPr="00384D96" w:rsidRDefault="00384D96" w:rsidP="0042414B">
     <w:pPr>
         <w:tabs>
@@ -6,46 +7,27 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:ind w:firstLine="851" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r w:rsidRPr="00384D96">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:lastRenderedPageBreak />
         <w:t>Цель</w:t>
     </w:r>
     <w:r w:rsidR="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t xml:space="preserve"> работы</w:t>
     </w:r>
     <w:r w:rsidRPr="00384D96">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>:</w:t>
     </w:r>
     <w:r w:rsidR="002001DA" w:rsidRPr="002001DA">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve"> овладение криптографической терминологией.</w:t>
     </w:r>
 </w:p>
@@ -57,10 +39,7 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:ind w:firstLine="851" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
     </w:pPr>
 </w:p>
@@ -72,18 +51,12 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="center" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
     </w:pPr>
     <w:r w:rsidRPr="00637047">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>Выполнение работы:</w:t>
     </w:r>
@@ -96,21 +69,12 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:ind w:firstLine="851" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>Необходимо провести статистический анализ русскоязычного литературного текста. В данном случае, взят {{text_name}}:</w:t>
+        <w:t>Необходимо провести статистический анализ русскоязычного литературного текста. В данном случае, {{text_name}}:</w:t>
     </w:r>
 </w:p>
+{% for paragraph in text %}
 <w:p w:rsidR="002001DA" w:rsidRPr="002001DA" w:rsidRDefault="002001DA" w:rsidP="002001DA">
     <w:pPr>
         <w:tabs>
@@ -119,39 +83,12 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:ind w:firstLine="851" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-    </w:pPr>
-</w:p>
-        {% for paragraph in text %}
-<w:p w:rsidR="002001DA" w:rsidRPr="002001DA" w:rsidRDefault="002001DA" w:rsidP="002001DA">
-    <w:pPr>
-        <w:tabs>
-            <w:tab w:val="left" w:pos="3495" />
-        </w:tabs>
-        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:ind w:firstLine="851" />
-        <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>{{paragraph}}</w:t>
     </w:r>
 </w:p>
-        {% endfor %}
-
+{% endfor %}
 <w:p w:rsidR="002001DA" w:rsidRDefault="00F12E68" w:rsidP="002001DA">
     <w:pPr>
         <w:tabs>
@@ -160,101 +97,24 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:ind w:firstLine="851" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>Следующий шаг – исследование частотной характеристики</w:t>
-    </w:r>
-    <w:r w:rsidR="002001DA">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve"> данного отрыв</w:t>
+        <w:t>Следующий шаг – исследование частотной характеристики данного отрывка.</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>ка</w:t>
-    </w:r>
-    <w:r w:rsidR="002001DA">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>.</w:t>
+        <w:t xml:space="preserve"> Характеристиками текстов, используемыми в криптоанализе, являются такие характеристики, как повторяемость букв, пар букв </w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve"> Х</w:t>
-    </w:r>
-    <w:r w:rsidRPr="00F12E68">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>арактеристиками текстов, используемыми в криптоанализе, явл</w:t>
-    </w:r>
-    <w:r w:rsidRPr="00F12E68">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>я</w:t>
-    </w:r>
-    <w:r w:rsidRPr="00F12E68">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve">ются такие характеристики, как повторяемость букв, пар букв </w:t>
-    </w:r>
-    <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">(биграмм) и </w:t>
     </w:r>
     <w:r w:rsidR="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>m</w:t>
     </w:r>
     <w:r w:rsidRPr="00F12E68">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>-грамм, сочетаемость букв друг с другом, чередование гласных и согласных и
-                    некоторые другие.</w:t>
+        <w:t>-грамм, сочетаемость букв друг с другом, чередование гласных и согласных и некоторые другие.</w:t>
     </w:r>
 </w:p>
 <w:p w:rsidR="00F12E68" w:rsidRDefault="00F12E68" w:rsidP="002001DA">
@@ -265,151 +125,71 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:ind w:firstLine="851" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>Проведено определение повторяемости букв алфавита в художестве</w:t>
-    </w:r>
-    <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>н</w:t>
-    </w:r>
-    <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve">ном тексте, а так же их </w:t>
+        <w:t>Проведено определение повторяемости букв алфавита в художественном тексте, а также их</w:t>
     </w:r>
     <w:r w:rsidR="00775659">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve">относительной частоты, определяемой как </w:t>
+        <w:t xml:space="preserve"> относительной частоты, определяемой как </w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>F</w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>=</w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>n</w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>/</w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>N</w:t>
     </w:r>
     <w:r w:rsidR="00775659">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">, где </w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>n</w:t>
     </w:r>
     <w:r w:rsidR="00775659">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve">– количество повторений буквы в тексте, а </w:t>
+        <w:t xml:space="preserve"> – количество повторений буквы в тексте, а </w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>N</w:t>
     </w:r>
     <w:r w:rsidR="00775659">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>– общее количество букв в тексте</w:t>
+        <w:t xml:space="preserve"> – общее количество букв в тексте </w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve"> (т</w:t>
-    </w:r>
-    <w:r w:rsidR="0017003F">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>аблица 1).</w:t>
+        <w:t>(таблица 1).</w:t>
     </w:r>
 </w:p>
 <w:p w:rsidR="00F12E68" w:rsidRDefault="00F12E68" w:rsidP="00775659">
@@ -419,11 +199,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00F12E68" w:rsidRDefault="00F12E68" w:rsidP="00F12E68">
@@ -433,38 +208,360 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>Таблица 1 – Частотн</w:t>
-    </w:r>
-    <w:r w:rsidR="00775659">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>ость</w:t>
-    </w:r>
-    <w:r w:rsidR="00C3766F">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>букв в тексте</w:t>
+        <w:t>Таблица 1 – Частотность букв в тексте</w:t>
     </w:r>
 </w:p>
-        {% macro table_macro(table) %}
+{% macro table_macro(table, type="", count="", style=0) %} 
+    {% if style==2 %}
+    <w:tbl>
+        <w:tblPr>
+            <w:tblW w:w="0" w:type="auto" />
+            <w:jc w:val="center" />
+            <w:tblBorders>
+                <w:top w:val="single" w:sz="4" w:space="0" w:color="auto" />
+                <w:left w:val="single" w:sz="4" w:space="0" w:color="auto" />
+                <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto" />
+                <w:right w:val="single" w:sz="4" w:space="0" w:color="auto" />
+                <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto" />
+                <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto" />
+            </w:tblBorders>
+            <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0"
+                w:noHBand="0" w:noVBand="1" />
+        </w:tblPr>
+        <w:tblGrid>
+            <w:gridCol w:w="3188" />
+            <w:gridCol w:w="2056" />
+            <w:gridCol w:w="2056" />
+            <w:gridCol w:w="2056" />
+        </w:tblGrid>
+        <w:tr w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
+            <w:trPr>
+                <w:jc w:val="center" />
+            </w:trPr>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="3188" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                    </w:pPr>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                        <w:t>Г</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                        <w:t>С</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:rPr>
+                            <w:sz w:val="24" />
+                        </w:rPr>
+                        <w:t>ВСЕГО</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+        </w:tr>
+        <w:tr w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
+            <w:trPr>
+                <w:jc w:val="center" />
+            </w:trPr>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="3188" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>Г</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{vv_count}} ({{(vv_count/(vv_count+vc_count+cv_count+cc_count))|round(5,
+                            'floor')}})</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{vc_count}} ({{(vv_count/(vv_count+vc_count+cv_count+cc_count))|round(5,
+                            'floor')}})</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{vc_count ++ vv_count}}</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+        </w:tr>
+        <w:tr w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
+            <w:trPr>
+                <w:jc w:val="center" />
+            </w:trPr>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="3188" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>С</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{cv_count}} ({{(vv_count/(vv_count+vc_count+cv_count+cc_count))|round(5,
+                            'floor')}})</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{cc_count}} ({{(vv_count/(vv_count+vc_count+cv_count+cc_count))|round(5,
+                            'floor')}})</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{cc_count + cv_count}}</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+        </w:tr>
+        <w:tr w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
+            <w:trPr>
+                <w:jc w:val="center" />
+            </w:trPr>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="3188" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>ИТОГО</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                </w:p>
+            </w:tc>
+            <w:tc>
+                <w:tcPr>
+                    <w:tcW w:w="2056" w:type="dxa" />
+                </w:tcPr>
+                <w:p w:rsidR="005F7C0C" w:rsidRPr="00D85F13" w:rsidRDefault="005F7C0C"
+                    w:rsidP="00D85F13">
+                    <w:pPr>
+                        <w:tabs>
+                            <w:tab w:val="left" w:pos="851" />
+                        </w:tabs>
+                        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                        <w:jc w:val="center" />
+                    </w:pPr>
+                    <w:r w:rsidRPr="00D85F13">
+                        <w:t>{{vv_count+vc_count+cv_count+cc_count}}</w:t>
+                    </w:r>
+                </w:p>
+            </w:tc>
+        </w:tr>
+    </w:tbl>
+{% else %}
 <w:tbl>
     <w:tblPr>
         <w:tblW w:w="9923" w:type="dxa" />
@@ -477,7 +574,8 @@
             <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto" />
             <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto" />
         </w:tblBorders>
-        <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1" />
+        <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0"
+            w:noHBand="0" w:noVBand="1" />
     </w:tblPr>
     <w:tblGrid>
         <w:gridCol w:w="1135" />
@@ -486,16 +584,16 @@
         <w:gridCol w:w="1094" />
         <w:gridCol w:w="1617" />
         <w:gridCol w:w="2250" />
-    </w:tblGrid>
-                {% for lines in table %} 
-    <w:tr w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
-                {% for line in lines %} 
-                {% for cell in line %} 
-        <w:tc>
+    </w:tblGrid>{% if style==0 %} <w:tr w:rsidR="00775659"
+        w:rsidRPr="00D85F13" w:rsidTr="00D85F13">{% for index in range(2) %} <w:trPr>
+            <w:jc w:val="center" />
+        </w:trPr>
+<w:tc>
             <w:tcPr>
                 <w:tcW w:w="1135" w:type="dxa" />
             </w:tcPr>
-            <w:p w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidRDefault="00775659" w:rsidP="00D85F13">
+            <w:p w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidRDefault="00775659"
+                w:rsidP="00D85F13">
                 <w:pPr>
                     <w:tabs>
                         <w:tab w:val="left" w:pos="3495" />
@@ -503,60 +601,196 @@
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:jc w:val="center" />
                     <w:rPr>
-                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
                         <w:sz w:val="24" />
-                        <w:szCs w:val="28" />
                     </w:rPr>
                 </w:pPr>
                 <w:r w:rsidRPr="00D85F13">
                     <w:rPr>
-                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
                         <w:sz w:val="24" />
-                        <w:szCs w:val="28" />
                     </w:rPr>
-                    <w:t>{{cell}}</w:t>
+                    <w:t>Буква</w:t>
                 </w:r>
             </w:p>
         </w:tc>
-                        {% endfor %} 
-                    {% endfor %} 
-    </w:tr>
-                {% endfor %}
-    <w:tr w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
+<w:tc>
+            <w:tcPr>
+                <w:tcW w:w="1617" w:type="dxa" />
+            </w:tcPr>
+            <w:p w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidRDefault="00775659"
+                w:rsidP="00D85F13">
+                <w:pPr>
+                    <w:tabs>
+                        <w:tab w:val="left" w:pos="3495" />
+                    </w:tabs>
+                    <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
+                    <w:jc w:val="center" />
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                    </w:rPr>
+                </w:pPr>
+                <w:r w:rsidRPr="00D85F13">
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                    </w:rPr>
+                    <w:t>Количество повторений</w:t>
+                </w:r>
+            </w:p>
+        </w:tc>
+<w:tc>
+            <w:tcPr>
+                <w:tcW w:w="2210" w:type="dxa" />
+            </w:tcPr>
+            <w:p w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidRDefault="00775659"
+                w:rsidP="00D85F13">
+                <w:pPr>
+                    <w:tabs>
+                        <w:tab w:val="left" w:pos="3495" />
+                    </w:tabs>
+                    <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
+                    <w:jc w:val="center" />
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                    </w:rPr>
+                </w:pPr>
+                <w:r w:rsidRPr="00D85F13">
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                    </w:rPr>
+                    <w:t>Относительная частота</w:t>
+                </w:r>
+            </w:p>
+        </w:tc>
+    {% endfor %} </w:tr>
+{% elif style==1 %} <w:tr w:rsidR="000E3F16" w:rsidRPr="00D85F13"
+        w:rsidTr="00D85F13">
+        <w:trPr>
+            <w:jc w:val="center" />
+        </w:trPr>{% for index in range(4) %} <w:tc>
+            <w:tcPr>
+                <w:tcW w:w="1401" w:type="dxa" />
+            </w:tcPr>
+            <w:p w:rsidR="000E3F16" w:rsidRPr="00D85F13" w:rsidRDefault="000E3F16"
+                w:rsidP="00D85F13">
+                <w:pPr>
+                    <w:tabs>
+                        <w:tab w:val="left" w:pos="851" />
+                    </w:tabs>
+                    <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                    <w:jc w:val="center" />
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                        <w:szCs w:val="24" />
+                    </w:rPr>
+                </w:pPr>
+                <w:r w:rsidRPr="00D85F13">
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                        <w:szCs w:val="24" />
+                    </w:rPr>
+                    <w:t>Биграмма</w:t>
+                </w:r>
+            </w:p>
+        </w:tc>
+<w:tc>
+            <w:tcPr>
+                <w:tcW w:w="1208" w:type="dxa" />
+            </w:tcPr>
+            <w:p w:rsidR="000E3F16" w:rsidRPr="00D85F13" w:rsidRDefault="000E3F16"
+                w:rsidP="00D85F13">
+                <w:pPr>
+                    <w:tabs>
+                        <w:tab w:val="left" w:pos="851" />
+                    </w:tabs>
+                    <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                    <w:jc w:val="center" />
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                        <w:szCs w:val="24" />
+                    </w:rPr>
+                </w:pPr>
+                <w:r w:rsidRPr="00D85F13">
+                    <w:rPr>
+                        <w:sz w:val="24" />
+                        <w:szCs w:val="24" />
+                    </w:rPr>
+                    <w:t>Частота</w:t>
+                </w:r>
+            </w:p>
+        </w:tc>{%
+    endfor %} </w:tr>{% endif %}{% for lines in table %} <w:tr w:rsidR="00775659"
+        w:rsidRPr="00D85F13" w:rsidTr="00D85F13">{% for line in lines %}{% for cell in line %} <w:tc>
+            <w:tcPr>
+                <w:tcW w:w="2250" w:type="dxa" />
+            </w:tcPr>
+            <w:p w:rsidR="00C3766F" w:rsidRPr="00D85F13" w:rsidRDefault="00C3766F"
+                w:rsidP="00D85F13">
+                <w:pPr>
+                    <w:tabs>
+                        <w:tab w:val="left" w:pos="3495" />
+                    </w:tabs>
+                    <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                    <w:jc w:val="center" />
+                </w:pPr>
+                <w:r w:rsidRPr="00D85F13">
+                    <w:t>{{cell}}</w:t>
+                </w:r>
+            </w:p>
+        </w:tc>{%
+    endfor %}{% endfor %} </w:tr>{% endfor %}{% if style==0 %} <w:tr w:rsidR="00C3766F"
+        w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
         <w:trPr>
             <w:jc w:val="center" />
         </w:trPr>
         <w:tc>
             <w:tcPr>
-                <w:tcW w:w="1135" w:type="dxa" />
+                <w:tcW w:w="9923" w:type="dxa" />
+                <w:gridSpan w:val="6" />
             </w:tcPr>
-            <w:p w:rsidR="00775659" w:rsidRPr="00D85F13" w:rsidRDefault="00775659" w:rsidP="00D85F13">
+            <w:p w:rsidR="00C3766F" w:rsidRPr="00D85F13" w:rsidRDefault="00C3766F"
+                w:rsidP="00D85F13">
                 <w:pPr>
                     <w:tabs>
                         <w:tab w:val="left" w:pos="3495" />
                     </w:tabs>
-                    <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
+                    <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
                     <w:jc w:val="center" />
-                    <w:rPr>
-                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                        <w:sz w:val="24" />
-                        <w:szCs w:val="28" />
-                    </w:rPr>
                 </w:pPr>
                 <w:r w:rsidRPr="00D85F13">
-                    <w:rPr>
-                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                        <w:sz w:val="24" />
-                        <w:szCs w:val="28" />
-                    </w:rPr>
-                    <w:t>ВСЕГО {{entity_name}} – {{total_number}} </w:t>
+                    <w:t>ВСЕГО{{type}} –{{count}}</w:t>
+                </w:r>
+            </w:p>
+        </w:tc>
+    </w:tr>{%
+    else %} <w:tr w:rsidR="0004416B" w:rsidRPr="00D85F13" w:rsidTr="00D85F13">
+        <w:trPr>
+            <w:jc w:val="center" />
+        </w:trPr>
+        <w:tc>
+            <w:tcPr>
+                <w:tcW w:w="9889" w:type="dxa" />
+                <w:gridSpan w:val="8" />
+            </w:tcPr>
+            <w:p w:rsidR="0004416B" w:rsidRPr="00D85F13" w:rsidRDefault="0004416B"
+                w:rsidP="00D85F13">
+                <w:pPr>
+                    <w:tabs>
+                        <w:tab w:val="left" w:pos="851" />
+                    </w:tabs>
+                    <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                    <w:jc w:val="center" />
+                </w:pPr>
+                <w:r w:rsidRPr="00D85F13">
+                    <w:t>ВСЕГО{{type}} –{{count}}</w:t>
                 </w:r>
             </w:p>
         </w:tc>
     </w:tr>
+    {% endif %} 
 </w:tbl>
-        {% endmacro %}
-        {{table_macro(table_1)}}
+{% endif %}
+{% endmacro %}
+
+{{table_macro(table_1, "БУКВ", letters_count, 0)}}
 <w:p w:rsidR="00C3766F" w:rsidRDefault="00C3766F" w:rsidP="00C3766F">
     <w:pPr>
         <w:tabs>
@@ -564,11 +798,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00C3766F" w:rsidRDefault="00C3766F" w:rsidP="00C3766F">
@@ -578,41 +807,17 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:tab />
-        <w:t>Из представленной таблицы можно сделать вывод о том, что наиболее часто
-                    встречаемым</w:t>
+        <w:t>Из представленной таблицы можно сделать вывод о том, что наиболее часто встречаемым</w:t>
     </w:r>
     <w:r w:rsidR="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>и буквами в данном тексте будут
-                    {% for letter in letters %}
-            <w:t></w:t> {{letter}},
-                    {% endfor %}
-        </w:t>
+        <w:t>и буквами в данном тексте будут{% for letter in top_letters %} <w:t></w:t>{{letter}},
+            {% endfor %} </w:t>
     </w:r>
     <w:r w:rsidR="00E8699D">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>. {{not_used_letters}}.</w:t>
+        <w:t>.{{missing_letters}}.</w:t>
     </w:r>
 </w:p>
 <w:p w:rsidR="00E8699D" w:rsidRDefault="00E8699D" w:rsidP="00C3766F">
@@ -622,71 +827,35 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:tab />
         <w:t xml:space="preserve">По данным таблицы </w:t>
     </w:r>
     <w:r w:rsidR="00775659">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">1 с помощью </w:t>
     </w:r>
     <w:r w:rsidR="00775659" w:rsidRPr="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>E</w:t>
     </w:r>
     <w:r w:rsidR="00775659">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:i />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
         <w:t>xcel </w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>построена диаграмма релье</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>ф</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>ности текста (рисунок 1).</w:t>
     </w:r>
     <w:bookmarkStart w:id="0" w:name="_GoBack" />
@@ -699,38 +868,9 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
-<w:p w:rsidR="00E8699D" w:rsidRPr="0089487D" w:rsidRDefault="00D85F13" w:rsidP="00E8699D">
-    <w:pPr>
-        <w:tabs>
-            <w:tab w:val="left" w:pos="851" />
-        </w:tabs>
-        <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:jc w:val="center" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-    </w:pPr>
-    <w:r w:rsidRPr="00C64DF2">
-        <w:rPr>
-            <w:noProof />
-        </w:rPr>
-        <w:pict>
-            <v:shape id="Диаграмма 1" o:spid="_x0000_i1026" type="#_x0000_t75" style="width:400.5pt;height:258.75pt;visibility:visible" o:gfxdata="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&#xA;">
-                <v:imagedata r:id="rId9" o:title="" />
-                <o:lock v:ext="edit" aspectratio="f" />
-            </v:shape>
-        </w:pict>
-    </w:r>
-</w:p>
+{{ img.image_p(diagram) }}
 <w:p w:rsidR="00E8699D" w:rsidRPr="0089487D" w:rsidRDefault="00E8699D" w:rsidP="00E8699D">
     <w:pPr>
         <w:tabs>
@@ -738,18 +878,8 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="center" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r w:rsidRPr="0089487D">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>Рисунок 1 – Диаграмма рельефности текста</w:t>
     </w:r>
 </w:p>
@@ -759,11 +889,6 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="003978F7" w:rsidRDefault="003978F7" w:rsidP="003978F7">
@@ -772,84 +897,34 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:tab />
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>Полезной является информация о сочетаемости букв, то есть о пре</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>д</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>почтительных связях букв друг с другом, которую легко из</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>влечь из таблиц частот биграмм.Следующим шагом подсчитаны ч</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>астоты встречаемости б</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>и</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t>грамм вида гласная-гласная (гг), гласная-согласная (гс), согласная-гласная
-                    (сг), согласная-согласная (сс) в</w:t>
+        <w:t>грамм вида гласная-гласная (гг), гласная-согласная (гс), согласная-гласная (сг),
+            согласная-согласная (сс) в</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve"> тексте (таблицы 2-6).</w:t>
+        <w:t xml:space="preserve">тексте (таблицы 2-6).</w:t>
     </w:r>
 </w:p>
 <w:p w:rsidR="003978F7" w:rsidRDefault="003978F7" w:rsidP="003978F7">
@@ -858,11 +933,6 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="003978F7" w:rsidRDefault="003978F7" w:rsidP="003978F7">
@@ -871,43 +941,21 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">Таблица 2 – Частота встречаемости </w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>биграмм вида гласная-гласная (гг)</w:t>
     </w:r>
-</w:p>
-
-        {{table_macro(table_2)}}
-
+</w:p>{{table_macro(table_2,"БИГРАММ
+ВИДА ГГ", vv_count, 1)}}
 <w:p w:rsidR="003978F7" w:rsidRDefault="003978F7" w:rsidP="003978F7">
     <w:pPr>
         <w:tabs>
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00396FE0" w:rsidRDefault="00396FE0" w:rsidP="00396FE0">
@@ -916,75 +964,32 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">Таблица 3 – Частота встречаемости </w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>биграмм вида гласная-</w:t>
     </w:r>
     <w:r w:rsidR="00C3359B">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>со</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>гласная (г</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>с</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>)</w:t>
     </w:r>
-</w:p>
-        
-        {{table_macro(table_3)}}
-
+</w:p>{{table_macro(table_3,"БИГРАММ ВИДА ГС", vc_count, 1)}}
 <w:p w:rsidR="00396FE0" w:rsidRDefault="00396FE0" w:rsidP="003978F7">
     <w:pPr>
         <w:tabs>
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00C3359B" w:rsidRDefault="00C3359B" w:rsidP="00C3359B">
@@ -993,64 +998,26 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">Таблица 4 – Частота встречаемости </w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">биграмм вида </w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>согласная-гласная (с</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">, </w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>г</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>)</w:t>
     </w:r>
-</w:p>
-        
-        {{table_macro(table_4)}}
-
+</w:p>{{table_macro(table_4,"БИГРАММ ВИДА СГ", cv_count, 1)}}
 <w:p w:rsidR="00AA5FF3" w:rsidRDefault="00AA5FF3" w:rsidP="00AB4BED">
     <w:pPr>
         <w:tabs>
@@ -1058,9 +1025,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
     </w:pPr>
@@ -1071,48 +1035,20 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">Таблица 5 – Частота встречаемости </w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">биграмм вида </w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>согласная-согласная (сс</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>)</w:t>
     </w:r>
-</w:p>
-
-        {{table_macro(table_5)}}
-
+</w:p>{{table_macro(table_5,"БИГРАММ ВИДА СС", cc_count, 1)}}
 <w:p w:rsidR="00AB4BED" w:rsidRDefault="00AB4BED" w:rsidP="003978F7">
     <w:pPr>
         <w:tabs>
@@ -1120,9 +1056,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
     </w:pPr>
@@ -1134,9 +1067,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
     </w:pPr>
@@ -1148,9 +1078,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
             <w:lang w:val="en-US" />
         </w:rPr>
     </w:pPr>
@@ -1161,67 +1088,29 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">Таблица </w:t>
     </w:r>
     <w:r w:rsidR="00A1405B">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>6</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve"> – Частота встречаемости биграмм в тексте</w:t>
+        <w:t xml:space="preserve">– Частота встречаемости биграмм в тексте</w:t>
     </w:r>
-</w:p>
-
-        {{table_macro(table_6)}}
-
+</w:p>{{table_macro(table_6, style=2)}}
 <w:p w:rsidR="005F7C0C" w:rsidRDefault="005F7C0C" w:rsidP="003978F7">
     <w:pPr>
         <w:tabs>
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:tab />
         <w:t xml:space="preserve">На основе исследований биграмм можно сделать вывод, что биграммы вида согласная-гласная и гласная-согласная наиболее часто встречаются в тексте. Так </w:t>
     </w:r>
     <w:r w:rsidR="00A1405B">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t xml:space="preserve">же по таблицам можно определить буквы, которые с наибольшей вероятностью будут предшествовать или следовать за конкретной выбранной буквой. </w:t>
     </w:r>
 </w:p>
@@ -1231,53 +1120,23 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:tab />
         <w:t xml:space="preserve">По таблице 6 можно составить диаграмму (рисунок 2), целью которой является наглядно показать процентное соотношение </w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>встречаемости биграмм вида гласная-гласная (гг), гласная-согласная (гс),
-                    согласная-гласная (сг), с</w:t>
+            согласная-гласная (сг), с</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>о</w:t>
     </w:r>
     <w:r w:rsidRPr="003978F7">
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>гласная-согласная (сс) в</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
-        <w:t xml:space="preserve"> данном тексте.</w:t>
+        <w:t xml:space="preserve">данном тексте.</w:t>
     </w:r>
 </w:p>
 <w:p w:rsidR="00A1405B" w:rsidRDefault="00A1405B" w:rsidP="003978F7">
@@ -1286,11 +1145,6 @@
             <w:tab w:val="left" w:pos="851" />
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00A1405B" w:rsidRDefault="00D85F13" w:rsidP="00A1405B">
@@ -1300,18 +1154,15 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="center" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r w:rsidRPr="00C64DF2">
         <w:rPr>
             <w:noProof />
         </w:rPr>
         <w:pict>
-            <v:shape id="Диаграмма 56" o:spid="_x0000_i1025" type="#_x0000_t75" style="width:309.75pt;height:216.75pt;visibility:visible" o:gfxdata="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&#xA;">
+            <v:shape id="Диаграмма 56" o:spid="_x0000_i1025" type="#_x0000_t75"
+                style="width:309.75pt;height:216.75pt;visibility:visible"
+                o:gfxdata="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&#xA;">
                 <v:imagedata r:id="rId10" o:title="" />
                 <o:lock v:ext="edit" aspectratio="f" />
             </v:shape>
@@ -1325,18 +1176,8 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="center" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>Рисунок 2 – Диаграмма встречаемости биграмм</w:t>
     </w:r>
 </w:p>
@@ -1347,11 +1188,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="center" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00A1405B" w:rsidRDefault="00444584" w:rsidP="00A1405B">
@@ -1361,35 +1197,15 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:tab />
         <w:t>Результаты исследований данного отрывка текста соответствуют ст</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>а</w:t>
     </w:r>
     <w:r>
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
         <w:t>тистике встречаемости букв и биграмм в художественных текстах.</w:t>
     </w:r>
 </w:p>
@@ -1400,11 +1216,6 @@
         </w:tabs>
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
-        <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
-        </w:rPr>
     </w:pPr>
 </w:p>
 <w:p w:rsidR="00AA5FF3" w:rsidRPr="00AA5FF3" w:rsidRDefault="00444584" w:rsidP="00A1405B">
@@ -1415,45 +1226,30 @@
         <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
         <w:jc w:val="both" />
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
     </w:pPr>
     <w:r>
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:tab />
     </w:r>
     <w:r w:rsidRPr="00444584">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>Вывод</w:t>
     </w:r>
     <w:r w:rsidR="00AA5FF3">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>ы</w:t>
     </w:r>
     <w:r w:rsidRPr="00444584">
         <w:rPr>
-            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
             <w:b />
-            <w:sz w:val="28" />
-            <w:szCs w:val="28" />
         </w:rPr>
         <w:t>:</w:t>
     </w:r>
