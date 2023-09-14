@@ -1,0 +1,1 @@
+from .Laba_1.laba1 import Laba1
