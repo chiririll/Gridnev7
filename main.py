@@ -94,10 +94,10 @@ def get_ltrs_freq_table(all_freq: dict[str, int], letters_count: int, precision:
     half_len = len(freq_items) // 2
     for i in range(0, half_len):
         ltr, cnt = freq_items[i]
-        left = [ltr, cnt, round((cnt / letters_count), precision) if cnt > 0 else "–"]
+        left = [ltr.upper(), cnt, round((cnt / letters_count), precision) if cnt > 0 else "–"]
         if i < len(freq_items):
             ltr, cnt = freq_items[half_len + i]
-            right = [ltr, cnt, round((cnt / letters_count), precision) if cnt > 0 else "–"]
+            right = [ltr.upper(), cnt, round((cnt / letters_count), precision) if cnt > 0 else "–"]
         else:
             right = ["", "", ""]
         items.append([left, right])
