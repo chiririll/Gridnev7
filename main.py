@@ -33,6 +33,10 @@ def main():
     cv_count = {k:v for k, v in sorted(count_all_letters(text, consonant_vowel).items(), key=lambda k: k[1], reverse=True) if v > 0}
     cc_count = {k:v for k, v in sorted(count_all_letters(text, consonant_consonant).items(), key=lambda k: k[1], reverse=True) if v > 0}
 
+    top_letters = [k for k, v in sorted(all_freq.items(), key=lambda k: k[1], reverse=True) if v > 0]
+    top_letters = top_letters[:min(config["max_top_letters"], len(top_letters))]
+    missing_letters = [k for k, v in all_freq.items() if v == 0]
+
     # Templates
 
     with open("document.xml", 'r', encoding="UTF-8") as f:
@@ -46,6 +50,9 @@ def main():
 
             text_name = "какой-то текст который мне скинул Ванёк",
             text = lines,
+
+            top_letters = top_letters,
+            missing_letters = missing_letters,
 
             letters_count = letters_count,
             vv_count = len(vv_count),
