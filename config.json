@@ -31,5 +31,6 @@
     "sp": "[^а-я ]",
     "no_sp": "[^а-я]"
   },
-  "precision": 4
+  "precision": 4,
+  "max_top_letters": 5
 }

@@ -1999,7 +1999,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>. {{not_used_letters}}.</w:t>
+                <w:t>. {{missing_letters}}.</w:t>
             </w:r>
         </w:p>
         <w:p
