@@ -790,7 +790,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>Необходимо провести статистический анализ русскоязычного литературного текста. В данном случае, взят {{text_name}:}</w:t>
+                <w:t>Необходимо провести статистический анализ русскоязычного литературного текста. В данном случае, взят {{text_name}}:</w:t>
             </w:r>
         </w:p>
         <w:p w:rsidR="002001DA" w:rsidRPr="002001DA" w:rsidRDefault="002001DA" w:rsidP="002001DA">
@@ -808,7 +808,7 @@
                 </w:rPr>
             </w:pPr>
         </w:p>
-        {% for in paragraph in text %}
+        {% for paragraph in text %}
         <w:p w:rsidR="002001DA" w:rsidRPr="002001DA" w:rsidRDefault="002001DA" w:rsidP="002001DA">
             <w:pPr>
                 <w:tabs>
