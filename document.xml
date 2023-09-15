@@ -819,22 +819,6 @@
                 <w:t>Необходимо провести статистический анализ русскоязычного литературного текста. В данном случае, взят {{text_name}}:</w:t>
             </w:r>
         </w:p>
-        <w:p
-            w:rsidR="002001DA" w:rsidRPr="002001DA" w:rsidRDefault="002001DA" w:rsidP="002001DA">
-            <w:pPr>
-                <w:tabs>
-                    <w:tab w:val="left" w:pos="3495" />
-                </w:tabs>
-                <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-                <w:ind w:firstLine="851" />
-                <w:jc w:val="both" />
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-            </w:pPr>
-        </w:p>
         {% for paragraph in text %} <w:p w:rsidR="002001DA" w:rsidRPr="002001DA"
             w:rsidRDefault="002001DA" w:rsidP="002001DA">
             <w:pPr>
