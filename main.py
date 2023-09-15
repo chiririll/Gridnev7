@@ -33,9 +33,9 @@ def main():
     cv_count = {k:v for k, v in sorted(count_all_letters(text, consonant_vowel).items(), key=lambda k: k[1], reverse=True) if v > 0}
     cc_count = {k:v for k, v in sorted(count_all_letters(text, consonant_consonant).items(), key=lambda k: k[1], reverse=True) if v > 0}
 
-    top_letters = [k for k, v in sorted(all_freq.items(), key=lambda k: k[1], reverse=True) if v > 0]
-    top_letters = top_letters[:min(config["max_top_letters"], len(top_letters))]
-    missing_letters = [k for k, v in all_freq.items() if v == 0]
+    top_letters = [k.upper() for k, v in sorted(all_freq.items(), key=lambda k: k[1], reverse=True) if v > 0]
+    top_letters = ", ".join(top_letters[:min(config["max_top_letters"], len(top_letters))])
+    missing_letters = ", ".join([k.upper() for k, v in all_freq.items() if v == 0])
 
     # Templates
 

@@ -474,15 +474,6 @@
                 </w:rPr>
                 <w:t>Выполнил</w:t>
             </w:r>
-            <w:r w:rsidR="00A1405B">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:eastAsia="Calibri"
-                        w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t>а</w:t>
-            </w:r>
             <w:r>
                 <w:rPr>
                     <w:rFonts w:ascii="Times New Roman" w:eastAsia="Calibri"
@@ -825,8 +816,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>Необходимо провести статистический анализ русскоязычного литературного текста.
-        В данном случае, взят {{text_name}}:</w:t>
+                <w:t>Необходимо провести статистический анализ русскоязычного литературного текста. В данном случае, взят {{text_name}}:</w:t>
             </w:r>
         </w:p>
         <w:p
@@ -970,8 +960,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>-грамм, сочетаемость букв друг с другом, чередование гласных и согласных и
-        некоторые другие.</w:t>
+                <w:t>-грамм, сочетаемость букв друг с другом, чередование гласных и согласных и некоторые другие.</w:t>
             </w:r>
         </w:p>
         <w:p w:rsidR="00F12E68"
@@ -1093,7 +1082,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t xml:space="preserve">– количество повторений буквы в тексте, а </w:t>
+                <w:t xml:space="preserve"> – количество повторений буквы в тексте, а </w:t>
             </w:r>
             <w:r w:rsidR="00775659" w:rsidRPr="00775659">
                 <w:rPr>
@@ -1111,7 +1100,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>– общее количество букв в тексте</w:t>
+                <w:t xml:space="preserve"> – общее количество букв в тексте</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
@@ -1165,23 +1154,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>Таблица 1 – Частотн</w:t>
-            </w:r>
-            <w:r w:rsidR="00775659">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t>ость</w:t>
-            </w:r>
-            <w:r w:rsidR="00C3766F">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t>букв в тексте</w:t>
+                <w:t>Таблица 1 – Частотность букв в тексте</w:t>
             </w:r>
         </w:p> {% macro table_macro(table, type="", count="", style=0) %} 
         {% if style == 2 %}
@@ -1981,17 +1954,7 @@
                     <w:szCs w:val="28" />
                 </w:rPr>
                 <w:tab />
-                <w:t>Из представленной таблицы можно сделать вывод о том, что наиболее часто
-        встречаемым</w:t>
-            </w:r>
-            <w:r w:rsidR="003978F7">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t>и буквами в данном тексте будут {% for letter in top_letters %} <w:t> </w:t>
-        {{letter}}, {% endfor %} </w:t>
+                <w:t>Из представленной таблицы можно сделать вывод о том, что наиболее часто встречаемыми буквами в данном тексте будут {{ top_letters }}.</w:t>
             </w:r>
             {% if missing_letters %}
             <w:r w:rsidR="00E8699D">
@@ -2000,7 +1963,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>. {{missing_letters}}.</w:t>
+                <w:t xml:space="preserve"> Ниразу в отрывке не встретились буквы {{ missing_letters }}.</w:t>
             </w:r>
             {% endif %}
         </w:p>
@@ -2043,17 +2006,7 @@
                     <w:szCs w:val="28" />
                     <w:lang w:val="en-US" />
                 </w:rPr>
-                <w:t>E</w:t>
-            </w:r>
-            <w:r w:rsidR="00775659">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:i />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                    <w:lang w:val="en-US" />
-                </w:rPr>
-                <w:t>xcel</w:t>
+                <w:t>MatPlotLib</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
@@ -2061,7 +2014,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t> построена диаграмма релье</w:t>
+                <w:t xml:space="preserve"> построена диаграмма релье</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
@@ -2097,34 +2050,9 @@
                 </w:rPr>
             </w:pPr>
         </w:p>
-        <w:p
-            w:rsidR="00E8699D" w:rsidRPr="0089487D" w:rsidRDefault="00D85F13" w:rsidP="00E8699D">
-            <w:pPr>
-                <w:tabs>
-                    <w:tab w:val="left" w:pos="851" />
-                </w:tabs>
-                <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-                <w:jc w:val="center" />
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-            </w:pPr>
-            <w:r w:rsidRPr="00C64DF2">
-                <w:rPr>
-                    <w:noProof />
-                </w:rPr>
-                <w:pict>
-                    <v:shape id="Диаграмма 1" o:spid="_x0000_i1026" type="#_x0000_t75"
-                        style="width:400.5pt;height:258.75pt;visibility:visible"
-                        o:gfxdata="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&#xA;">
-                        <v:imagedata r:id="rId9" o:title="" />
-                        <o:lock v:ext="edit" aspectratio="f" />
-                    </v:shape>
-                </w:pict>
-            </w:r>
-        </w:p>
+
+
+
         <w:p
             w:rsidR="00E8699D" w:rsidRPr="0089487D" w:rsidRDefault="00E8699D" w:rsidP="00E8699D">
             <w:pPr>
@@ -2503,36 +2431,7 @@
                 </w:rPr>
                 <w:t>)</w:t>
             </w:r>
-        </w:p> {{table_macro(table_5,"БИГРАММ ВИДА СС", cc_count, 1)}} <w:p
-            w:rsidR="00AB4BED" w:rsidRDefault="00AB4BED" w:rsidP="003978F7">
-            <w:pPr>
-                <w:tabs>
-                    <w:tab w:val="left" w:pos="851" />
-                </w:tabs>
-                <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                    <w:lang w:val="en-US" />
-                </w:rPr>
-            </w:pPr>
-        </w:p>
-        <w:p
-            w:rsidR="00AA5FF3" w:rsidRDefault="00AA5FF3" w:rsidP="003978F7">
-            <w:pPr>
-                <w:tabs>
-                    <w:tab w:val="left" w:pos="851" />
-                </w:tabs>
-                <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                    <w:lang w:val="en-US" />
-                </w:rPr>
-            </w:pPr>
-        </w:p>
+        </w:p> {{table_macro(table_5,"БИГРАММ ВИДА СС", cc_count, 1)}} 
         <w:p
             w:rsidR="00AA5FF3" w:rsidRPr="00AA5FF3" w:rsidRDefault="00AA5FF3" w:rsidP="003978F7">
             <w:pPr>
@@ -2587,6 +2486,21 @@
             </w:r>
         </w:p>
         {{table_macro(table_6, style=2)}} 
+        <w:p
+            w:rsidR="00AA5FF3" w:rsidRPr="00AA5FF3" w:rsidRDefault="00AA5FF3" w:rsidP="003978F7">
+            <w:pPr>
+                <w:tabs>
+                    <w:tab w:val="left" w:pos="851" />
+                </w:tabs>
+                <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
+                <w:rPr>
+                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
+                    <w:sz w:val="28" />
+                    <w:szCs w:val="28" />
+                    <w:lang w:val="en-US" />
+                </w:rPr>
+            </w:pPr>
+        </w:p>
         <w:p w:rsidR="005F7C0C" w:rsidRDefault="005F7C0C"
             w:rsidP="003978F7">
             <w:pPr>
@@ -2646,32 +2560,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t>встречаемости биграмм вида гласная-гласная (гг), гласная-согласная (гс),
-        согласная-гласная (сг), с</w:t>
-            </w:r>
-            <w:r w:rsidRPr="003978F7">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t>о</w:t>
-            </w:r>
-            <w:r w:rsidRPr="003978F7">
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t>гласная-согласная (сс) в</w:t>
-            </w:r>
-            <w:r>
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-                <w:t xml:space="preserve"> данном тексте.</w:t>
+                <w:t>встречаемости биграмм вида гласная-гласная (гг), гласная-согласная (гс), согласная-гласная (сг), согласная-согласная (сс) в данном тексте.</w:t>
             </w:r>
         </w:p>
         <w:p
@@ -2688,34 +2577,9 @@
                 </w:rPr>
             </w:pPr>
         </w:p>
-        <w:p
-            w:rsidR="00A1405B" w:rsidRDefault="00D85F13" w:rsidP="00A1405B">
-            <w:pPr>
-                <w:tabs>
-                    <w:tab w:val="left" w:pos="851" />
-                </w:tabs>
-                <w:spacing w:after="0" w:line="360" w:lineRule="auto" />
-                <w:jc w:val="center" />
-                <w:rPr>
-                    <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" />
-                    <w:sz w:val="28" />
-                    <w:szCs w:val="28" />
-                </w:rPr>
-            </w:pPr>
-            <w:r w:rsidRPr="00C64DF2">
-                <w:rPr>
-                    <w:noProof />
-                </w:rPr>
-                <w:pict>
-                    <v:shape id="Диаграмма 56" o:spid="_x0000_i1025" type="#_x0000_t75"
-                        style="width:309.75pt;height:216.75pt;visibility:visible"
-                        o:gfxdata="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&#xA;">
-                        <v:imagedata r:id="rId10" o:title="" />
-                        <o:lock v:ext="edit" aspectratio="f" />
-                    </v:shape>
-                </w:pict>
-            </w:r>
-        </w:p>
+
+
+
         <w:p
             w:rsidR="00A1405B" w:rsidRDefault="00A1405B" w:rsidP="00A1405B">
             <w:pPr>
