@@ -2,6 +2,8 @@ import re
 import json
 
 from jinja2 import Template
+import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
     f = open("input.txt", 'r', encoding="UTF-8")
@@ -37,6 +39,12 @@ def main():
     top_letters = ", ".join(top_letters[:min(config["max_top_letters"], len(top_letters))])
     missing_letters = ", ".join([k.upper() for k, v in all_freq.items() if v == 0])
 
+    vv_sum = sum(vv_count.values())
+    vc_sum = sum(vc_count.values())
+    cv_sum = sum(cv_count.values())
+    cc_sum = sum(cc_count.values())
+    bigrams_all_sum = vv_sum + vc_sum + cv_sum + cc_sum
+
     # Templates
 
     with open("document.xml", 'r', encoding="UTF-8") as f:
@@ -55,10 +63,10 @@ def main():
             missing_letters = missing_letters,
 
             letters_count = letters_count,
-            vv_count = sum(vv_count.values()),
-            vc_count = sum(vc_count.values()),
-            cv_count = sum(cv_count.values()),
-            cc_count = sum(cc_count.values()),
+            vv_count = vv_sum,
+            vc_count = vc_sum,
+            cv_count = cv_sum,
+            cc_count = cc_sum,
 
             table_1 = get_ltrs_freq_table(all_freq, letters_count, config['precision']),
             
@@ -67,6 +75,21 @@ def main():
             table_4 = get_bigrams_table(cv_count),
             table_5 = get_bigrams_table(cc_count),
         ))
+
+    fig1, diag1 = plt.subplots()
+
+    diag1.plot(np.array(list(map(str, all_freq.keys()))), np.array(list(map(lambda x: x / letters_count, all_freq.values()))))
+    diag1.grid()
+    diag1.set(ylabel="Относительная частота", title="Диаграмма рельефности текста")
+
+    fig1.savefig("out/diag1.png")
+
+    fig2, diag2 = plt.subplots()
+    diag2.pie(
+        np.array([vv_sum , vc_sum , cv_sum , cc_sum]), 
+        labels = ["Г, Г", "Г, С", "С, Г", "С, С"], 
+        autopct='%1.1f%%')
+    fig2.savefig("out/diag2.png")
 
 
 def process_text(lines: list[str], pattern: str) -> str:

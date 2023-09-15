@@ -1963,7 +1963,7 @@
                     <w:sz w:val="28" />
                     <w:szCs w:val="28" />
                 </w:rPr>
-                <w:t xml:space="preserve"> Ниразу в отрывке не встретились буквы {{ missing_letters }}.</w:t>
+                <w:t xml:space="preserve"> Ни разу в отрывке не встретились буквы {{ missing_letters }}.</w:t>
             </w:r>
             {% endif %}
         </w:p>
